@@ -67,6 +67,8 @@ git push -u origin main
 ### sub1-repository の変更を main-repository に反映する
 ```
 # main-repository で行う
+git -C sub1-repository checkout origin/main
+
 
 ```
 
