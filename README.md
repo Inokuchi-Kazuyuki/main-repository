@@ -14,7 +14,6 @@ gh repo create sub1-repository --add-readme --public
 # sub2-repository
 gh repo create sub2-repository --add-readme --public
 ```
-[^1]: [GitHub CLI の リポジトリに関する Manual](https://cli.github.com/manual/gh_repo)
 
 ## リポジトリの設定
 GitHub CLI で repo create する時に同時に行えるが、Git コマンド[^2] で行う
@@ -71,4 +70,5 @@ git push -u origin main
 
 ```
 
+[^1]: [GitHub CLI の リポジトリに関する Manual](https://cli.github.com/manual/gh_repo)
 [^2]: [Git コマンドのマニュアル](https://git-scm.com/docs)
