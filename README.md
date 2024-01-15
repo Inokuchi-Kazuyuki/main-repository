@@ -3,7 +3,7 @@
 ## リポジトリ準備
 
 main、sub1、sub2 の３つのリポジトリを作成  
-GitHub CLI [^１] を使用
+GitHub CLI [^1] を使用
 ```
 # main-repository
 gh repo create main-repository --add-readme --public
