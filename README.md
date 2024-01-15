@@ -68,8 +68,30 @@ git push -u origin main
 ```
 # main-repository で行う
 git -C sub1-repository checkout origin/main
+# 変更をステージに追加
+git add .
+# 変更をコミット
+git commit -m "XXXXX"
+# リモートリポジトリにプッシュ
+git push -u origin main
 
+or
 
+# sub1-repository に移動
+cd sub1-repository
+# ブランチを切り替える
+git checkout main
+# リモートリポジトリから最新を反映
+git pull
+
+# main-repository に移動
+cd main-repository
+# 変更をステージに追加
+git add .
+# 変更をコミット
+git commit -m "XXXXX"
+# リモートリポジトリにプッシュ
+git push -u origin main
 ```
 
 [^1]: [GitHub CLI の リポジトリに関する Manual](https://cli.github.com/manual/gh_repo)
