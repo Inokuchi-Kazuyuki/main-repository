@@ -94,5 +94,11 @@ git commit -m "XXXXX"
 git push -u origin main
 ```
 
+### サブモジュールで特定のブランチを追跡する
+```
+# main-repository で行う
+git config -f .gitmodules submodule.[submodule-path].branch [branch-name]
+```
+
 [^1]: [GitHub CLI の リポジトリに関する Manual](https://cli.github.com/manual/gh_repo)
 [^2]: [Git コマンドのマニュアル](https://git-scm.com/docs)
