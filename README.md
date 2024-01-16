@@ -67,6 +67,11 @@ git push -u origin main
 ### sub1-repository の変更を main-repository に反映する
 ```
 # main-repository で行う
+git submodule update --remote
+
+or
+
+# main-repository で行う
 git -C sub1-repository checkout origin/main
 # 変更をステージに追加
 git add .
