@@ -6,13 +6,13 @@ main、sub1、sub2 の３つのリポジトリを作成
 GitHub CLI [^1] を使用
 ```
 # main-repository
-gh repo create main-repository --add-readme --public
+gh repo create main-repository --add-readme --public --clone
 
 # sub1-repository
-gh repo create sub1-repository --add-readme --public
+gh repo create sub1-repository --add-readme --public --clone
 
 # sub2-repository
-gh repo create sub2-repository --add-readme --public
+gh repo create sub2-repository --add-readme --public --clone
 ```
 
 ## リポジトリの設定
