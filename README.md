@@ -107,14 +107,34 @@ git config -f .gitmodules submodule.[submodule-path].branch [branch-name]
 
 ## サブモジュールの削除
 ```
-# main-repository で行う
-# sub2-repository を削除
-git submodule deinit sub2-repository
+# git rm を使用する
+# ディレクトを削除し、その変更をステージングエリアに追加
+# また、.gitmodules からも削除
+git rm sub2-repository
+# .git/config からは手動で削除
+git config --remove-section submodule.sub2-repository
+# .git/modules/sub2-repository を削除
+rm -rf .git/modules/sub2-repository
+git add .
+git commit -m "XXXX"
+git push -u
 
-# .gitmodules から sub2-repository を削除
--- [submodule "sub2-repository"]
---	path = sub1-repository
---	url = git@github.com:Inokuchi-Kazuyuki/sub1-repository
+# git submodule deinit を使用する
+# .git/config からのみ削除
+git submodule deinit sub2-repository
+# .gitmodules からは手動で削除
+git config -f .gitmodules --remove-section submodule.sub2
+-repository
+# sub2-repository を削除
+rm -rf sub2-repository
+# .git/modules/sub2-repository を削除
+rm -rf .git/modules/sub2-repository
+git add .
+git commit -m "XXXX"
+git push -u
+
+
+
 ```
 
 
