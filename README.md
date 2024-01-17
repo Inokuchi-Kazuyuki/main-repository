@@ -105,5 +105,18 @@ git push -u origin main
 git config -f .gitmodules submodule.[submodule-path].branch [branch-name]
 ```
 
+## サブモジュールの削除
+```
+# main-repository で行う
+# sub2-repository を削除
+git submodule deinit sub2-repository
+
+# .gitmodules から sub2-repository を削除
+-- [submodule "sub2-repository"]
+--	path = sub1-repository
+--	url = git@github.com:Inokuchi-Kazuyuki/sub1-repository
+```
+
+
 [^1]: [GitHub CLI の リポジトリに関する Manual](https://cli.github.com/manual/gh_repo)
 [^2]: [Git コマンドのマニュアル](https://git-scm.com/docs)
