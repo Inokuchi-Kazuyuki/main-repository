@@ -2,6 +2,3 @@
 	path = sub1-repository
 	url = git@github.com:Inokuchi-Kazuyuki/sub1-repository
 	branch = main
-[submodule "sub2-repository"]
-	path = sub2-repository
-	url = git@github.com:Inokuchi-Kazuyuki/sub2-repository
