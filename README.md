@@ -136,6 +136,25 @@ git commit -m "XXXX"
 git push -u
 ```
 
+## サブモジュールが存在するリポジトリを取得
+### --recurse-submodules を使用
+```
+git clone --recurse-submodules git@github.com:Inokuchi-Kazuyuki/main-repository
+```
+### サブモジュール毎に初期化
+```
+# --recurse-submodules なしで clone
+git clone git@github.com:Inokuchi-Kazuyuki/main-repository
+
+# リポジトリのディレクトリに移動
+cd main-repository
+
+# 初期化
+git submodule init
+
+# 更新
+git submodule update
+```
 
 [^1]: [GitHub CLI の リポジトリに関する Manual](https://cli.github.com/manual/gh_repo)
 [^2]: [Git コマンドのマニュアル](https://git-scm.com/docs)
