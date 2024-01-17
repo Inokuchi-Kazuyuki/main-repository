@@ -106,8 +106,8 @@ git config -f .gitmodules submodule.[submodule-path].branch [branch-name]
 ```
 
 ## サブモジュールの削除
+### git rm を使用する
 ```
-# git rm を使用する
 # ディレクトを削除し、その変更をステージングエリアに追加
 # また、.gitmodules からも削除
 git rm sub2-repository
@@ -118,8 +118,10 @@ rm -rf .git/modules/sub2-repository
 git add .
 git commit -m "XXXX"
 git push -u
+```
 
-# git submodule deinit を使用する
+### git submodule deinit を使用する
+```
 # .git/config からのみ削除
 git submodule deinit sub2-repository
 # .gitmodules からは手動で削除
@@ -132,9 +134,6 @@ rm -rf .git/modules/sub2-repository
 git add .
 git commit -m "XXXX"
 git push -u
-
-
-
 ```
 
 
